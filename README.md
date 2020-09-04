@@ -2,6 +2,16 @@ Note: Currently the food detection API console logs results after clicking the d
 to child component and render to the document. food detection API currently supports linked images, drag and drop function may or may not be implemented on version 1.2 Alpha.
 Thank you!!!
 
+you are able to view food detection in its unfinished state, here are the steps:
+
+- click 'sign in' (does not matter if you registered or not)
+- copy and paste food URL to the input bar.
+- click "detect"
+- right click "inspect element" if you are using chrome browser
+- go to Console tab, beside Elements tab.
+- click results --> outputs --> [0] --> data --> concepts.
+- Finished.
+
 -Pacholo Amit
 
 

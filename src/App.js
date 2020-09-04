@@ -37,7 +37,7 @@ class App extends Component {
       foodUrl: '',
       route: 'signin',
       isSignedIn: false,
-      prediction: {},
+     /* prediction: {},*/
 
     }
   }
@@ -52,7 +52,7 @@ class App extends Component {
       Clarifai.FOOD_MODEL,
       this.state.input)
       .then(response => {
-      this.setState({onPrediction:response.outputs[0].data.concepts[0]}); /* <----- This is the data i paassed to component "Prediction" (below) that I need rendered */
+      console.log({response}); /*MAKE THIS SET.STATE.INPUT*/ 
       })
       .catch(err => {
       console.log(err);
