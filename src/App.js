@@ -6,7 +6,6 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition.js'
 import Register from './components/Register/Register.js'
 import Rank from './components/Rank/Rank.js'
 import SignIn from './components/SignIn/Signin.js'
-//import Prediction from './components/Prediction/Prediction.js'
 import './App.css';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
@@ -37,7 +36,7 @@ class App extends Component {
       foodUrl: '',
       route: 'signin',
       isSignedIn: false,
-     /* prediction: {},*/
+      prediction1: {}
 
     }
   }
@@ -51,8 +50,9 @@ class App extends Component {
     app.models.predict(
       Clarifai.FOOD_MODEL,
       this.state.input)
+
       .then(response => {
-      console.log({response}); /*MAKE THIS SET.STATE.INPUT*/ 
+      this.setState({Prediction1: response.outputs[0].data.concepts[0].name}); /*MAKE THIS SET.STATE.INPUT*/ 
       })
       .catch(err => {
       console.log(err);
@@ -85,10 +85,12 @@ class App extends Component {
         ? <div>
           <Logo />
           <Rank />
-         { /*<Prediction onPrediction={this.state.onPrediction}/>  {/*<---------this is the component */}
           <ImageLinkForm
           onInputChange={this.onInputChange}
           onButtonSubmit={this.onButtonSubmit} />
+          <div className= 'mt4'>
+            Type of Food: <div><b><u>{this.state.Prediction1}</u></b></div>
+           </div>
           <FaceRecognition imageUrl={this.state.imageUrl} />
         </div>
         : (
