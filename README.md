@@ -1,16 +1,20 @@
-Note: Currently the food detection API console logs results after clicking the detect function. Working on ReactJS to route the output of API prediction (I.E ingredients, etc.)
-to child component and render to the document. food detection API currently supports linked images, drag and drop function may or may not be implemented on version 1.2 Alpha.
-Thank you!!!
+Alpha v1.1 notes:
 
-you are able to view food detection in its unfinished state, here are the steps:
+You may bypass the Sign in and Registration for the moment. You may
+click sign in to access the application. As of now, the application
+only supports image links for the API to classify food. After inputting
+image link, you may click "Detect" then wait a few secs until the image
+along with the classification is determined by the API. Enjoy!
 
-- click 'sign in' (does not matter if you registered or not)
-- copy and paste food URL to the input bar.
-- click "detect"
-- right click "inspect element" if you are using chrome browser
-- go to Console tab, beside Elements tab.
-- click results --> outputs --> [0] --> data --> concepts.
-- Finished.
+Note: Accuracy of A.I may vary as it utilizes machine learning. Will
+improve on this on v1.2
+
+May be added on Alpha v1.2:
+
+-Drag and drop functionality
+-Sign in and Register (Once database is set up - PostgreSQL)
+-Rank system
+-Camera integration (I dunno, maybe)
 
 -Pacholo Amit
 
